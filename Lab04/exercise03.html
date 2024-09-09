@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercises 3</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- <style>
+        input[type="checkbox"]:checked {
+            background-color: #fff;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <form class="border rounded m-3 p-3" action="">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputFirstName">First name</label>
+                                <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputLastName">Last name</label>
+                                <input type="text" class="form-control" id="inputLastName" placeholder="Last name">
+                                <div class="invalid-feedback my-2">
+                                    <p class="text-light bg-danger d-inline rounded py-1 px-2">
+                                        Last name is required
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputUsername">Username</label>
+                            <input class="form-control" type="text" id="inputUsername" placeholder="Username">
+                            <div class="invalid-feedback">
+                                Please enter your usename
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputPasswordpassword">Password</label>
+                            <input class="form-control" type="password" id="inputPassword" placeholder="Password">
+                            <div class="invalid-feedback">
+                                Password is not valid
+                            </div>
+                        </div>
+
+                        <label for="">Gender</label>
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inputGender" id="inputMale"
+                                    value="M">
+                                <label class="form-check-label" for="inputMale">
+                                    Male
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inputGender" id="inputFemale"
+                                    value="F">
+                                <label class="form-check-label" for="inputFemale">
+                                    Female
+                                </label>
+                            </div>
+                        </div>
+
+
+
+                        <div class=" form-group">
+                            <label for="inputSelectCountry">Country</label>
+                            <select class="form-control" id="inputSelectCountry">
+                                <option value="vn">Vietnam</option>
+                                <option value="us">US</option>
+                                <option value="uk">UK</option>
+                                <option value="china">China</option>
+                                <option value="germany">Germany</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <input class="form-countrol checkbox-primary" type="checkbox" name="" id="remember">
+                            <label for="remember" class="form-check-label">
+                                Remember me
+                            </label>
+                            <div class="form-check">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <button type="submit" class="px-5 btn btn-success" onclick="login(this)">Login</button>
+                            <button type="reset" class="px-5 btn btn-outline-success">Reset</button>
+                        </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login(e) {
+            // console.log(e);
+            let firstname = $('#inputFirstName')[0];
+            let lastname = $('#inputLastName')[0];
+            let username = $('#inputUsername')[0];
+            let password = $('#inputPassword')[0];
+            let inputSelectCountry = $('#inputSelectCountry')[0];
+
+            // console.log($(inputSelectCountry).val());
+
+            if ($(firstname).val() === '') {
+                $(firstname).addClass('is-invalid');
+                $(firstname).removeClass('is-valid');
+            }
+            else {
+                $(firstname).addClass('is-valid');
+                $(firstname).removeClass('is-invalid');
+            }
+
+            if ($(lastname).val() === '') {
+                $(lastname).addClass('is-invalid');
+                $(lastname).removeClass('is-valid');
+            }
+            else {
+                $(lastname).addClass('is-valid');
+                $(lastname).removeClass('is-invalid');
+            }
+
+            if ($(username).val() === '') {
+                $(username).addClass('is-invalid');
+                $(username).removeClass('is-valid');
+            }
+            else {
+                $(username).addClass('is-valid');
+                $(username).removeClass('is-invalid');
+            }
+
+            if ($(password).val() === '') {
+                $(password).addClass('is-invalid');
+                $(password).removeClass('is-valid');
+            }
+            else {
+                $(password).addClass('is-valid');
+                $(password).removeClass('is-invalid');
+            }
+
+            if ($(inputSelectCountry).val() === '') {
+                $(inputSelectCountry).addClass('is-invalid');
+                $(inputSelectCountry).removeClass('is-valid');
+            }
+            else {
+                $(inputSelectCountry).addClass('is-valid');
+                $(inputSelectCountry).removeClass('is-invalid');
+            }
+        }
+
+        $(document).ready(function () {
+            $("form").submit(function (e) {
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Checker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #passwordInput {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+      }
+      #passwordStrength {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        border: 1px solid #ccc;
+      }
+      .weak {
+        background-color: #ff6961; /* deep red */
+      }
+      .strong {
+        background-color: #77dd77; /* green */
+      }
+      .notification {
+        margin-top: 5px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Password Strength Checker</h2>
+    <input
+      type="password"
+      id="passwordInput"
+      placeholder="Enter your password"
+    />
+
+    <div id="passwordStrength"></div>
+
+    <script>
+      const passwordInput = document.getElementById("passwordInput");
+      const passwordStrength = document.getElementById("passwordStrength");
+
+      passwordInput.addEventListener("input", updatePasswordStrength);
+
+      function updatePasswordStrength() {
+        const password = passwordInput.value;
+
+        let notifications = [];
+
+        if (password.length < 8) {
+          notifications.push("Password needs to be at least 8 characters");
+        } else {
+          notifications.push(
+            "You meet the length requirement for the password"
+          );
+        }
+
+        if (!/\d/.test(password)) {
+          notifications.push("Password needs at least 1 number");
+        } else {
+          notifications.push("Your password contains at least 1 number");
+        }
+
+        // Clear existing notifications
+        passwordStrength.innerHTML = "";
+
+        if (notifications.length === 0) {
+          strength = "Strong";
+          passwordStrength.classList.remove("weak");
+          passwordStrength.classList.add("strong");
+        } else {
+          strength = "Weak";
+          passwordStrength.classList.remove("strong");
+          passwordStrength.classList.add("weak");
+        }
+
+        if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+          notifications.push("Password needs at least 1 special character");
+        } else {
+          notifications.push(
+            "Your password contains at least 1 special character"
+          );
+        }
+
+        if (password.includes(" ")) {
+          notifications.push("Password should not contain spaces");
+        } else {
+          notifications.push("Your password does not contain spaces");
+        }
+
+        const strengthDiv = document.createElement("div");
+        strengthDiv.textContent = `Password Strength: ${strength}`;
+        passwordStrength.appendChild(strengthDiv);
+
+        notifications.forEach((notification) => {
+          const notificationDiv = document.createElement("div");
+          notificationDiv.textContent = notification;
+          if (
+            notification.includes("meet") ||
+            notification.includes("contains")
+          ) {
+            notificationDiv.classList.add("strong");
+          }
+          passwordStrength.appendChild(notificationDiv);
+        });
+      }
+    </script>
+  </body>
+</html>

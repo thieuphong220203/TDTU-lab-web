@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 40px;
+    background-color: #fff8df;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.content {
+    width: 30%;
+    margin: 10px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group{
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+/* hover */
+input:hover {
+    background: #fff5cf;
+}
+
+input:focus {
+    background-color:  #f3de8e;
+    border-color:  #d97000;
+    outline: none;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+.form-group label {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+button[type="submit"] {
+    background-color: #dd2c2c;
+    color: white;
+    padding: 8px 11px;
+    border: none;
+    border-radius: 3px;
+}
+
+button[type="reset"] {
+    background-color:#e3a73f ;
+    color: white;
+    padding: 8px 11px;
+    border:none;
+    border-radius: 3px;
+}
+
+.input-error{
+    color: red;
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+input[type='range'] {
+    margin-top: -10px;   
+}
+
+.form-group label[for="country"] {
+    display: block;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.form-group select:hover {
+    background-color:  #f3de8e;
+}
+
+.form-group select:focus {
+    background-color:  #f3de8e;
+    border-color:  #d97000;
+    outline: none;
+}

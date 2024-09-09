@@ -1,0 +1,52 @@
+body {
+  font-family: Roboto, serif;
+  background-color: #d8d7db;
+  box-sizing: border-box;
+}
+
+#chat {
+  margin: 0 auto;
+  width: 300px;
+  height: 500px;
+  overflow: scroll;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+#chat .hoder {
+  width: 50%;
+  border-radius: 10px;
+}
+
+#chat .hoder.me {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 50%;
+  margin-left: auto;
+}
+
+#chat .hoder .content {
+  background-color: #e5e5ea;
+  border-radius: inherit;
+  padding: 8px;
+  margin-bottom: 5px;
+  display: block;
+  width: fit-content;
+}
+
+#chat .hoder.me .content:hover {
+  background-color: #058e2f;
+  transition: all 1s;
+}
+
+#chat .hoder .content:hover {
+  background-color: #bfbdbf;
+  transition: all 1s;
+}
+
+#chat .hoder.me .content {
+  background-color: #01bf41;
+  color: #ffffffee;
+  width: fit-content;
+}

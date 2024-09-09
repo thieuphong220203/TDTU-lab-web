@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise03</title>
+    <style>
+      table {
+        margin: 0 auto;
+        border: 1px solid #d2d2d2;
+        padding: 8px 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      action="https://web-503073-wiolshzi6q-uc.a.run.app/lab01/register"
+      method="post"
+      enctype="application/x-www-form-urlencoded"
+    >
+      <table>
+        <tr>
+          <td>Your Name</td>
+          <td>
+            <input type="text" name="name" autofocus style="width: 180px" />
+          </td>
+        </tr>
+        <tr>
+          <td>Email Address</td>
+          <td><input type="email" name="email" style="width: 180px" /></td>
+        </tr>
+        <tr>
+          <td>Birthday</td>
+          <td><input type="date" name="birthday" style="width: 180px" /></td>
+        </tr>
+        <tr>
+          <td>Birthtime</td>
+          <td><input type="time" name="birthtime" style="width: 180px" /></td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>
+            <input type="radio" value="male" name="gender" /> Male
+            <input type="radio" value="female" name="gender" /> Female
+          </td>
+        </tr>
+        <tr>
+          <td>From</td>
+          <td>
+            <select name="country" id="countries" style="width: 180px">
+              <option selected disabled>Select a country</option>
+              <optgroup label="Asia">
+                <option value="Vietnam">Vietnam</option>
+                <option value="Laos">Laos</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Singapore">Singapore</option>
+              </optgroup>
+              <optgroup label="Europe">
+                <option value="France">France</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Italy">Italy</option>
+                <option value="Findland">Finland</option>
+                <!-- Corrected typo -->
+                <option value="Ireland">Ireland</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top">Favorite IDE</td>
+          <td>
+            <input
+              type="checkbox"
+              name="favorite_ide[]"
+              value="Visual Studio Code"
+            />Visual Studio Code
+            <br />
+            <input
+              type="checkbox"
+              name="favorite_ide[]"
+              value="Sublime Text"
+            />Sublime Text <br />
+            <input
+              type="checkbox"
+              name="favorite_ide[]"
+              value="Eclipse"
+            />Eclipse <br />
+            <input type="checkbox" name="favorite_ide[]" value="Atom" />Atom
+            <br />
+            <input
+              type="checkbox"
+              name="favorite_ide[]"
+              value="Intelij Idea"
+            />Intelij Idea <br />
+          </td>
+        </tr>
+
+        <tr>
+          <td>TOEIC Score</td>
+          <td>
+            <input
+              name="toeic"
+              id="toeic"
+              type="range"
+              min="5"
+              max="990"
+              step="5"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td style="vertical-align: top">Message</td>
+          <td>
+            <textarea name="message" id="message" cols="20" rows="5"></textarea>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Register" />
+            <input type="reset" value="Again" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

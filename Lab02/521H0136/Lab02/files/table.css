@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+ table {
+    margin: 0 auto;
+    border: 3px dashed #b00c2d;
+    margin-top: 30px;
+    text-align: center;
+    border-collapse: collapse;
+    font-weight: 500;
+ }
+
+ h3{
+    margin-top: 30px;
+    text-align: center;
+    color: #388e3c;
+    text-transform: uppercase;
+    font-size: 20px;
+ }
+
+.header {
+    background-color:#5f52ab ;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header .lunch {
+    background-color: #ffefb3;
+    color: black;
+    font-weight:bold;
+}
+
+.lab {
+    background-color:  #ffefb3;
+}
+
+td  {
+    padding: 20px;
+}
+
+.empty {
+  background:#e0e0e0;
+}
+
+.day {
+    font-weight:bold;
+}
+
+tr>td:first-child{
+    font-weight: bold;
+}
+
+/* hover setting */
+/* hover except the fourth child */
+tr:first-child:not(tr:first-child > td:nth-child(4)):hover { 
+    background-color: #480E7D;
+    transition: all 0.5s;
+}
+
+td:first-child:hover {
+    background-color: #480E7D;
+    color: white;
+    transition: 0.3s;
+}
+
+.lab:hover {
+    background: #F8D767;
+}
+
+
+.lunch:hover {
+background: #F8D767;
+}
+
+.empty:hover {
+    background-color: #909294;
+}
